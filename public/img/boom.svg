@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 800 262.37" version="1.1">
+  <g id="layer1" transform="translate(-87.795 -716.81)">
+    <g id="g3722" transform="matrix(1.0645 0 0 1.0645 -5.6594 -63.119)">
+      <rect id="rect3720" rx="24.902" ry="24.902" height="246.48" width="751.55" y="732.7" x="87.795" fill="#f6e864"/>
+      <g id="g3712">
+        <path id="path2880" fill="#1a1a1a" d="m557.86 855.93c0 52.073-42.213 94.286-94.286 94.286s-94.286-42.213-94.286-94.286 42.213-94.286 94.286-94.286 94.286 42.213 94.286 94.286z"/>
+        <path id="path2882" transform="matrix(.91667 0 0 .91667 38.631 71.328)" fill="#fff" d="m557.86 855.93c0 52.073-42.213 94.286-94.286 94.286s-94.286-42.213-94.286-94.286 42.213-94.286 94.286-94.286 94.286 42.213 94.286 94.286z"/>
+        <path id="rect3693" d="m161.09 834.16c-1.4839 0-2.6562 1.1723-2.6562 2.6562v37.5c0 1.4839 1.1723 2.6875 2.6562 2.6875h37.5c1.4839 0 2.6875-1.2036 2.6875-2.6875v-37.5c0-1.4839-1.2036-2.6562-2.6875-2.6562h-37.5zm87.719 0c-1.4839 0-2.6562 1.1723-2.6562 2.6562v37.5c0 1.4839 1.1723 2.6875 2.6562 2.6875h37.5c1.4839 0 2.6875-1.2036 2.6875-2.6875v-37.5c0-1.4839-1.2036-2.6562-2.6875-2.6562h-37.5zm-131.56 45.34c-1.4839 0-2.6875 1.2036-2.6875 2.6875v37.5c0 1.4839 1.2036 2.6875 2.6875 2.6875h37.5c1.4839 0 2.6875-1.2036 2.6875-2.6875v-37.5c0-1.4839-1.2036-2.6875-2.6875-2.6875h-37.5zm87.719 0c-1.4839 0-2.6875 1.2036-2.6875 2.6875v37.5c0 1.4839 1.2036 2.6875 2.6875 2.6875h37.5c1.4839 0 2.6875-1.2036 2.6875-2.6875v-37.5c0-1.4839-1.2036-2.6875-2.6875-2.6875h-37.5zm87.719 0c-1.4839 0-2.6875 1.2036-2.6875 2.6875v37.5c0 1.4839 1.2036 2.6875 2.6875 2.6875h37.5c1.4839 0 2.6562-1.2036 2.6562-2.6875v-37.5c0-1.4839-1.1723-2.6875-2.6562-2.6875h-37.5z"/>
+        <path id="path3710" d="m766.05 834.16c1.4839 0 2.6562 1.1723 2.6562 2.6562v37.5c0 1.4839-1.1723 2.6875-2.6562 2.6875h-37.5c-1.4839 0-2.6875-1.2036-2.6875-2.6875v-37.5c0-1.4839 1.2036-2.6562 2.6875-2.6562h37.5zm-87.719 0c1.4839 0 2.6562 1.1723 2.6562 2.6562v37.5c0 1.4839-1.1723 2.6875-2.6562 2.6875h-37.5c-1.4839 0-2.6875-1.2036-2.6875-2.6875v-37.5c0-1.4839 1.2036-2.6562 2.6875-2.6562h37.5zm131.56 45.34c1.4839 0 2.6875 1.2036 2.6875 2.6875v37.5c0 1.4839-1.2036 2.6875-2.6875 2.6875h-37.5c-1.4839 0-2.6875-1.2036-2.6875-2.6875v-37.5c0-1.4839 1.2036-2.6875 2.6875-2.6875h37.5zm-87.719 0c1.4839 0 2.6875 1.2036 2.6875 2.6875v37.5c0 1.4839-1.2036 2.6875-2.6875 2.6875h-37.5c-1.4839 0-2.6875-1.2036-2.6875-2.6875v-37.5c0-1.4839 1.2036-2.6875 2.6875-2.6875h37.5zm-87.719 0c1.4839 0 2.6875 1.2036 2.6875 2.6875v37.5c0 1.4839-1.2036 2.6875-2.6875 2.6875h-37.5c-1.4839 0-2.6562-1.2036-2.6562-2.6875v-37.5c0-1.4839 1.1723-2.6875 2.6562-2.6875h37.5z"/>
+        <path id="path2884" d="m411.56 797.91c-9.5773 12.133-15.312 24.659-15.312 41.316 0 0.21034 0.0294 0.41509 0.0312 0.625 3.4482-4.7455 8.9943-10.156 17.656-10.156h32.781v87.84c0 4.1872-5.3673 7.0621-11.25 9.8438l18.5 0.1875v0.15625l9.2188-0.0937 9.25 0.0937v-0.15625l18.469-0.1875c-5.8826-2.7817-11.25-5.6565-11.25-9.8438v-87.84h32.812c8.6619 0 14.208 5.4107 17.656 10.156 0.002-0.20991 0.0312-0.41466 0.0312-0.625 0-16.657-5.7352-29.183-15.312-41.316z"/>
+        <path id="rect3680" d="m391.28 887.38c1.1227 2.5782 2.3685 5.074 3.75 7.5h48v-7.5h-51.75zm92.062 0v7.5h48.781c1.382-2.4268 2.6271-4.921 3.75-7.5h-52.531zm-82.09 16.78c2.0358 2.6275 4.1857 5.1518 6.5312 7.5h35.25v-7.5h-41.781zm82.094 0v7.5h36c2.3456-2.3482 4.5266-4.8724 6.5625-7.5h-42.562z"/>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Soviet Taxi emblem</dc:title>
+        <dc:date>2011-04-10T13:42:13</dc:date>
+        <dc:description>auto, car, clip art, clipart, emblem, logo, russia, soviet, taxi, yellow, </dc:description>
+        <dc:source>http://openclipart.org/detail/131905/soviet-taxi-emblem-by-rones</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>rones</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>auto</rdf:li>
+            <rdf:li>car</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>emblem</rdf:li>
+            <rdf:li>logo</rdf:li>
+            <rdf:li>russia</rdf:li>
+            <rdf:li>soviet</rdf:li>
+            <rdf:li>taxi</rdf:li>
+            <rdf:li>yellow</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
