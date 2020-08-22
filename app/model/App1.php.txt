@@ -1,0 +1,522 @@
+<?php
+
+namespace App;
+    class DB
+    {
+        private static $_instance = null;
+
+        public static $qwe;
+
+        public static function getInstance ()
+        {
+            if (self::$_instance === null) 
+            {
+                self::$_instance = new self;
+            }
+            return self::$_instance;
+        }
+
+        public function set($param1)
+        {
+            self::$qwe = $param1;
+            // $this->qwe = $param1;
+            return $this;
+        }
+
+        public function getching()
+        {
+            return $this->qwe;
+        }
+
+
+        // //@@@@ QUERY BUILDER FOR SELECT
+
+        // private $select;
+        // private $table;
+        // private $where;
+        // private $where_values;
+        // private $groupBy;
+        // private $orderBy;
+
+        // private $where_raw_array;
+        // private $where_raw_value;
+
+        // private $query;
+        // private $connection = 'conn';
+
+        // private $where_array;
+        
+        // private function load_query()
+        // {
+        //     $stmt = $this->{$this->connection}->prepare($this->query);
+        //     $stmt->execute($this->where_values);
+        //     return $stmt->fetchAll();
+        // }
+
+        // private function query_build($return_query = FALSE)
+        // {
+        //     // return $this->select;
+        //     $this->combined_where();
+
+        //     $query = "SELECT $this->select FROM $this->table $this->where $this->groupBy $this->orderBy";
+            
+        //     $this->query = $query;
+
+        //     if($return_query == TRUE)
+        //     {
+        //         return $query;
+        //         // return $this->where_values;
+        //     }
+                
+        // }
+
+
+        // /**
+        //  * Getting an Item from database
+        //  *
+        //  * @return array
+        //  */
+        // public function get()
+        // {
+        //     $this->query_build();
+        //     return $this->load_query();
+        // }
+
+        // /**
+        //  * Getting the query built
+        //  *
+        //  * @return string
+        //  */
+        // public function get_query()
+        // {
+        //     return $this->query_build(TRUE);
+        // }
+
+        // /**
+        //  * Getting the values of where clause
+        //  *
+        //  * @return array
+        //  */
+        // public function get_where_values()
+        // {
+        //     $this->combined_where();
+        //     return $this->where_values;
+        // }
+
+        // /**
+        //  * Setting the connection name
+        //  *
+        //  * @param  string  $db
+        //  * @return array
+        //  */
+        // public function connection($db)
+        // {
+        //     $this->connection = $db;
+
+        //     return $this;
+        // }
+
+        // /**
+        //  * Create a raw database expression.
+        //  *
+        //  * @param  array/string  $string
+        //  * @return string
+        //  * 
+        //  * ex.
+        //  *     raw('COUNT(EMPLOYEE) AS TOTAL_COUNT')
+        //  *     raw('SUM(HOURS) AS TOTAL_HOURS')
+        //  *     raw(['SUM(HOURS) AS TOTAL_HOURS','COUNT(EMPLOYEE) AS TOTAL_COUNT'])
+        //  */
+        // public function raw($string)
+        // {
+        //     $result = "";
+        //     if(is_array($string) == TRUE)
+        //     {
+        //         foreach ($string as $key => $value)
+        //         {
+        //             $result .= $value . ",";
+        //         }
+        //         $result = rtrim($result, ",");
+        //     }
+        //     else
+        //     {
+        //         $result = $string;
+        //     }
+
+        //     return $result;
+        // }
+
+        // /**
+        //  * Create a select statement for query.
+        //  *
+        //  * @param  array/string  $column
+        //  * @param  string  $string_data <from raw function>
+        //  * 
+        //  * 
+        //  * ex. 
+        //  *    select('SECTION', $this->db->raw('COUNT(EMPLOYEE) AS total'));
+        //  *    select(['name','age','birthday']);
+        //  *    select('me');
+        //  */
+        // public function select($column,$string_data = null)
+        // {
+        //     $select;
+
+        //     if(is_array($column) == TRUE)
+        //     {
+        //         $values = "";
+        //         foreach ($column as $key => $value)
+        //         {
+        //             $values .= $value . ",";
+        //         }
+        //         $values = rtrim($values, ",");
+
+        //         $select = $values;
+        //     }
+        //     else
+        //     {
+        //         $select = $column;
+        //     }
+
+        //     if($string_data != NULL)
+        //     {
+        //         $select = $select . ',' . $string_data;
+        //     }
+
+        //     $this->select = $select;
+            
+        //     return $this;
+        // }
+
+        // /**
+        //  * Set a table of the table.
+        //  *
+        //  * @param  string  $table
+        //  * 
+        //  * ex. 
+        //  *    table('user_tbl')
+        //  */
+        // public function table($table)
+        // {
+        //     $this->table = $table;
+
+        //     return $this;
+        // }
+
+
+        // /**
+        //  * Create a where clause of the query.
+        //  */
+        // private function combined_where()
+        // {
+        //     $array_where = $this->where_array;
+        //     $array_where_raw = $this->where_raw_array;
+        //     $where = '';
+        //     $values = [];
+        //     if(!empty($array_where))
+        //     {
+        //         foreach($array_where as $key => $value)
+        //         {
+        //             $where .= $value['connector'] . ' ' . $value['column'] . ' ' . $value['operator'] . ' ' . $value['query_val'] . ' ';
+        //             $values = array_merge($values,$this->wrap($value['value']));
+        //         }
+
+        //     }
+
+        //     if(!empty($array_where_raw))
+        //     {
+        //         foreach($array_where_raw as $key => $value)
+        //         {
+        //             $where .= $value['connector'] . ' ' . $value['string'] . ' ';
+        //             // $values = array_merge($values,$this->wrap($value['value']));
+        //         }
+
+        //     }
+
+        //     if(!empty($array_where_raw) || !empty($array_where))
+        //     {
+
+        //         $where = ltrim($where,'AND ');
+        //         $where = ltrim($where,'OR ');
+
+        //         $where = 'WHERE ' . $where;
+
+        //         $this->where        = $where;
+        //         $this->where_values = $values;
+        //     }
+        // }
+
+        // private function combined_whereRaw()
+        // {
+
+
+
+        // }
+
+        // /**
+        //  * Create a where clause of the query.
+        //  *
+        //  * @param array/string $column
+        //  * @param string $operator
+        //  * @param string $value
+        //  * 
+        //  * ex. 
+        //  *    where('name','=','jason');
+        //  *    where([ ['name','=','jason'],['status','!=','deleted'] ])
+        //  */
+        // public function where($column,$operator = null,$value = null)
+        // {
+        //     if($column != NULL)
+        //     {
+        //         if(is_array($column) == TRUE)
+        //         {
+        //             $where_arr = "";
+        //             foreach ($column as $key => $value)
+        //             {
+        //                 $temp_where_arr = 
+        //                 [
+        //                     'column'    => $value[0],
+        //                     'operator'  => $value[1],
+        //                     'query_val' => '?',
+        //                     'value'     => $value[2],
+        //                     'connector' => 'AND'
+        //                 ];
+        //                 $where_arr[] = $temp_where_arr;
+        //             }
+
+        //             $this->where_array['where'] = $where_arr;
+        //         }
+        //         else
+        //         {
+        //             $where_arr = 
+        //             [
+        //                 'column'    => $column,
+        //                 'operator'  => $operator,
+        //                 'query_val' => '?',
+        //                 'value'     => $value,
+        //                 'connector' => 'AND'
+        //             ];
+                    
+        //             $this->where_array['where'] = $where_arr;
+        //         }
+        //     }
+        //     return $this;
+
+        // }
+
+        // /**
+        //  * Create aN IN condition clause of the query.
+        //  *
+        //  * @param string $column
+        //  * @param array $array_val
+        //  * 
+        //  * ex. 
+        //  *    whereIn('name',['jason','francis','jerwyn']);
+        //  */
+        // public function whereIn($column, $array_val)
+        // {
+
+        //     $query_value = '(';
+        //     $value = [];
+        //     foreach ($array_val as $key => $val)
+        //     {
+        //         $query_value   .= '?,';
+        //         $value[]        = $val;
+        //     }
+        //     $query_value = rtrim($query_value, ",");
+        //     $query_value .= ')';
+
+
+        //     $where_arr = 
+        //     [
+        //         'column'    => $column,
+        //         'operator'  => 'IN',
+        //         'query_val' => $query_value,
+        //         'value'     => $value,
+        //         'connector' => 'AND'
+        //     ];
+            
+        //     $this->where_array['whereIn'] = $where_arr;
+
+        //     return $this;
+        // }
+
+        // /**
+        //  * Create a NOT IN condition clause of the query.
+        //  *
+        //  * @param string $column
+        //  * @param array $array_val
+        //  * 
+        //  * ex. 
+        //  *    whereNotIn('name',['jason','francis','jerwyn']);
+        //  */
+        // public function whereNotIn($column, $array_val)
+        // {
+
+        //     $query_value = '(';
+        //     $value = [];
+        //     foreach ($array_val as $key => $val)
+        //     {
+        //         $query_value   .= '?,';
+        //         $value[]        = $val;
+        //     }
+        //     $query_value = rtrim($query_value, ",");
+        //     $query_value .= ')';
+
+
+        //     $where_arr = 
+        //     [
+        //         'column'    => $column,
+        //         'operator'  => 'NOT IN',
+        //         'query_val' => $query_value,
+        //         'value'     => $value,
+        //         'connector' => 'AND'
+        //     ];
+            
+        //     $this->where_array['whereNotIn'] = $where_arr;
+
+        //     return $this;
+        // }
+
+        // /**
+        //  * Create a BETWEEN condition in clause of the query.
+        //  *
+        //  * @param string $column
+        //  * @param array $array_val
+        //  * 
+        //  * ex. 
+        //  *    whereBetween('date',['2019/09/01','2019/09/30']);
+        //  */
+        // public function whereBetween($column, $array_val)
+        // {
+        //     $query_value = "? AND ?";
+
+        //     $where_arr = 
+        //     [
+        //         'column'    => $column,
+        //         'operator'  => 'BETWEEN',
+        //         'query_val' => $query_value,
+        //         'value'     => $array_val,
+        //         'connector' => 'AND'
+        //     ];
+            
+        //     $this->where_array['whereBetween'] = $where_arr;
+
+        //     return $this;
+        // }
+
+        // public function whereRaw($string,$val = null)
+        // {
+        //     $where_raw_array =
+        //     [
+        //         'string'    => $string,
+        //         // 'value'     => $val,
+        //         'connector' => 'AND'
+        //     ];
+
+        //     $this->where_raw_array['whereRaw'] = $where_raw_array;
+
+        //     return $this;
+        // }
+
+        // /**
+        //  * Create a GROUP BY clause of the query.
+        //  *
+        //  * @param array/string $column
+        //  * 
+        //  * ex. 
+        //  *    group_by('section');
+        //  *    group_by(['section','age','height'])
+        //  */
+        // public function group_by($column)
+        // {
+        //     if(is_array($column) == TRUE)
+        //     {
+        //         $values = "";
+        //         foreach ($column as $key => $value)
+        //         {
+        //             $values .= $value . ",";
+        //         }
+        //         $values = rtrim($values, ",");
+
+        //         $this->groupBy = 'GROUP BY ' . $values;
+        //     }
+        //     else
+        //     {
+        //         $this->groupBy = 'GROUP BY ' . $column;
+        //     }
+
+        //     return $this;
+        // }
+
+        // /**
+        //  * Create a ORDER BY clause of the query.
+        //  *
+        //  * @param array/string $column
+        //  * 
+        //  * ex. 
+        //  *    order_by('section');
+        //  *    order_by(['section','age','height'])
+        //  */
+        // public function order_by($column, $ordering = null)
+        // {
+        //     if(is_array($column) == TRUE)
+        //     {
+        //         $values = "";
+        //         $x=0;
+        //         foreach ($column as $key => $value)
+        //         {
+        //             $ordering_val = "";
+        //             if($ordering != null)
+        //             {
+        //                 $ordering_temp = strtoupper($ordering[$x]);
+        //                 if($ordering_temp == 'ASC' || $ordering_temp == 'DESC')
+        //                 {
+        //                     $ordering_val = $ordering_temp;
+        //                 }
+        //             }
+
+        //             $values .= $value . " " . $ordering_val . ",";
+
+        //             $x++;
+        //         }
+        //         $values = rtrim($values, ",");
+
+        //         $this->orderBy = 'ORDER BY ' . $values;
+        //     }
+        //     else
+        //     {
+        //         $this->orderBy = 'ORDER BY ' . $column . ' '. strtoupper($ordering) ;
+        //     }
+
+        //     return $this;
+        // }
+
+        // public function is_multi($a) 
+        // {
+        //     $rv = array_filter($a,'is_array');
+        //     if(count($rv)>0) return 1;
+        //     return 0;
+        // }
+
+        // /**
+        //  * Create an array.
+        //  *
+        //  * @param array/string $value
+        //  * 
+        //  * ex. 
+        //  *    wrap('section');
+        //  *    wrap(['section','age','height'])
+        //  */
+        // public static function wrap($value)
+        // {
+        //     if (is_null($value))
+        //     {
+        //         return [];
+        //     }
+
+        //     return is_array($value) ? $value : [$value];
+        // }
+        
+        // //@@@@ END QUERY BUILDER FOR SELECT
+    }
